@@ -21,29 +21,29 @@ Good practice settings for new web development projects
 
 ## - Step-by-step setups for projects (Shift left security):
 
-#### 0. Plantilla inicial (archivo README)
-#### 1. Repositorio y control de secretos (.gitignore + pre-commit)
-#### 2. Gestión de secretos en producción (no .env en imágenes)
-#### 3. Headers de seguridad y hardening HTTP (nginx + Express)
-#### 4. Cookies y sesiones
-#### 5. CORS y SAME-ORIGIN
-#### 6. Content Security Policy (CSP) — plantilla y proceso
-#### 7. HSTS y TLS
-#### 8. DNSSEC, OCSP, Certificate Transparency (operacional)
-#### 9. Seguridad de API tokens y secretos
-#### 10. CI/CD: control de acceso y automatización de seguridad (Shift-left)
-#### 11. WAF y rulesets
-#### 12. Escaneo de vulnerabilidades (DAST/SAST)
-#### 13. Logging seguro y monitoreo
-#### 14. Respuesta a incidentes y playbooks
+0. Initial commit (README)
+1. Repositories and secret control (.gitignore + pre-commit)
+2. Production secret management (no .env in images)
+3. Security headers and HTTP hardening (nginx + Express)
+4. Cookies and sessions
+5. CORS and SAME-ORIGIN
+6. Content Security Policy (CSP) — template and process
+7. HSTS and TLS
+8. DNSSEC, OCSP, Certificate Transparency (operational)
+9. API security: tokens and secrets
+10. CI/CD: access control and security automation (Shift-left)
+11. WAFs and rulesets
+12. Vulnerability scanning (DAST/SAST)
+13. Secure logging and monitoring
+14. Incident response and playbooks
 
 ## XSS, CSRF & Dom XSS utility table
 
 | Renderizado | Ataque principal | Vector | Cabeceras clave | Solución base |
 |--------------|------------------|---------|------------------|----------------|
-| SSR | XSS / CSRF | ViewBag, Model | CSP, HSTS, X-Frame-Options | Escapar y validar entradas; Anti-CSRF |
-| CSR | DOM XSS / iframe abuse | innerHTML, postMessage | CSP, X-Frame-Options, Permissions-Policy | Evitar HTML directo; sanitizar DOM |
-| Híbrido | Combinado | SSR + DOM | CSP, HSTS, Referrer-Policy | Sanitizar en ambos lados; report-only CSP |
+| SSR | XSS / CSRF | ViewBag, Model | CSP, HSTS, X-Frame-Options | escape & validate inputs; Anti-CSRF |
+| CSR | DOM XSS / iframe abuse | innerHTML, postMessage | CSP, X-Frame-Options, Permissions-Policy | Avoid raw HTML; sanitize DOM |
+| Híbrido | Combinado | SSR + DOM | CSP, HSTS, Referrer-Policy | Sanitize both sides; report-only CSP |
 
 ## Software architecture related:
 
