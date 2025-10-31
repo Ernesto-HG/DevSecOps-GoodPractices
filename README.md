@@ -45,3 +45,16 @@ Good practice settings for new web development projects
 | CSR | DOM XSS / iframe abuse | innerHTML, postMessage | CSP, X-Frame-Options, Permissions-Policy | Evitar HTML directo; sanitizar DOM |
 | Híbrido | Combinado | SSR + DOM | CSP, HSTS, Referrer-Policy | Sanitizar en ambos lados; report-only CSP |
 
+## Software architecture related:
+
+| Área                                       | Risks                                           | Good practices                                         |
+| ------------------------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Layered (n-tier, clean, onion)** | Responsabilities fusion, data exposure, SQL injection | Aislar dominio, infraestructura y presentación; usar principios SOLID |
+| **Identity & access management (IAM)** | Privilege scaling, token leak                         |  OAuth2, OpenID Connect, safe JWT                    |
+| **Communication**                         | Data interception, MITM                                   | HTTPS/TLS, on-transport encryption                           |
+| **Persistence & storage**          | Data filtering, corruption                                 | idle encryption, ORM with validations and sanitization                  |
+| **Microservices / APIs**                  | Deserialization attacks, Exposed APIs                      | Safe gateways, API Keys, rate limiting, centralized validation      |
+| **Events / Messaging**                   | Reproduction or message injection                            | Safe queues, message signatures (RabbitMQ con TLS, etc.)               |
+| **Deployment & DevOps**                    | Exposed credentials, CI/CD issues                        | Secret management, zero-trust, container scanning                |
+
+
