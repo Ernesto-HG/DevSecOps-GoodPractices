@@ -49,7 +49,7 @@ Good practice settings for new web development projects
 
 | Área                                       | Risks                                           | Good practices                                         |
 | ------------------------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Layered (n-tier, clean, onion)** | Responsabilities fusion, data exposure, SQL injection | Aislar dominio, infraestructura y presentación; usar principios SOLID |
+| **Layered (n-tier, clean, onion)** | Responsabilities fusion, data exposure, SQL injection | domain seggregation, infraestructure & presentation, SOLID principles |
 | **Identity & access management (IAM)** | Privilege scaling, token leak                         |  OAuth2, OpenID Connect, safe JWT                    |
 | **Communication**                         | Data interception, MITM                                   | HTTPS/TLS, on-transport encryption                           |
 | **Persistence & storage**          | Data filtering, corruption                                 | idle encryption, ORM with validations and sanitization                  |
